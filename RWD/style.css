@@ -1,53 +1,162 @@
-@charset "UTF-8";
+/*MEDIA QUERY 1 - Media query for viewports 960px and wider*/
+@media (min-width: 960px) {
 
 body{
-	background-color: #B4869F;
-	font-family: 'Spectral', serif;
-	font-family: 'Karla', sans-serif;
-	font-size:1.3rem;
-	color: #DCD6F7;
-	line-height:1.5;
-}
-
-article{
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2%;
-	padding: 3%;
-	width: 40%;
-	background-color: #424159;
-}
-
-ul {
-    width: 70%;
-    margin: auto;
-}
-
-li{
-	font-size:1.4rem;
-	font-family: 'Karla', sans-serif;
-}
-
-a{
-	color: #A6B1E1;
-	text-decoration: none;
-}
-
-a:hover{
-	text-decoration: underline;
+background: linear-gradient(#edd6ff,#fffef5) fixed;
+color: #1a1a1a;
+font-family: 'Karla', sans-serif;
 }
 
 h1{
-	margin: 0;
-	font-family: 'Spectral', serif;
-	font-size: 2.5rem;
-	text-align: center;
+font-size:2.5rem;
+text-align: center;
+font-family: 'Spectral', serif;
 }
 
-.responsive-photo-90{
-	display:block;
-	width:80%;
-	margin-right:auto;
-	margin-left:auto;
-	max-width:760px;
+article{
+width:950px;
+background-color:#edd6ff;
+min-height:480px;
+padding:15px;
+margin-left:auto;
+margin-right:auto;
 }
+
+/*navbar*/
+
+#navbar{
+list-style:none;
+margin-bottom:10px;
+float:left;
+width:940px;
+padding:5px;
+background-color:#c29ede;
+}
+
+#navbar li{
+font-size:1.2rem;
+float:left;
+margin-right:40px;
+margin-left:40px;
+position:relative;
+}
+
+#navbar a{
+display:block;
+padding:5px;
+color:#edd6ff;
+background:#1a1a1a;
+text-decoration:none;
+}
+
+#navbar a:hover{
+color:#fffef5;
+text-decoration:none;
+}
+
+/*Dropdown styling*/
+
+#navbar ul{
+list-style: none;
+position: absolute;
+left: -9999px; /*Hide off-screen when not hovered over*/
+}
+
+#navbar ul li{
+padding-top:5px; /*Between the li items for spacing*/
+float:none;
+margin-left:-25px;
+}
+
+#navbar ul a{
+white-space:nowrap; /*Stop text wrapping*/
+}
+
+#navbar li:hover ul{ /*Display the dropdown on hover*/
+left:0; /*Bring back on-screen when needed*/
+}
+
+#navbar li:hover a{ /*The top link display when a user hovers over sub-menu items*/
+text-decoration: none;
+background-color:#1a1a1a;;
+}
+
+#navbar li:hover ul a{ /*The hover state defined a global style for links even before they're hovered over. Here we undo these effects.*/
+text-decoration:none;
+}
+
+#navbar li:hover ul li a:hover{ /*Defines the most explicit hover states when a user hovers over an individual link.*/
+background-color:black;
+}
+
+} /*END MEDIA QUERY 1*/
+
+/*MEDIA QUERY 2 - Media query for viewports 959px and narrower*/
+
+@media (max-width: 959px) {
+
+body{
+background-color: #ffeda3;
+color: #1a1a1a;
+font-family: 'Karla', sans-serif;
+}
+
+h1{
+font-family: 'Spectral', serif;
+text-align: center;
+font-size:1.5rem;
+}
+
+article {
+background-color: #fffce8;
+min-height:480px;
+padding:5px;
+}
+
+a{
+font-size:1.5rem;
+text-decoration:none;
+}
+
+#navbar{
+list-style:none;
+margin-bottom:10px;
+}
+
+#navbar li{
+position:relative;
+margin-left:-40px;
+}
+
+#navbar a{
+font-size:1.25rem;
+display: block;
+width: 66%;
+padding: 10px;
+margin-bottom: 5px;
+color: #fffce8;
+background: #ffeda3;
+text-decoration: none;
+border-radius: 1px 5px 5px 1px;
+}
+
+#navbar a:hover{
+color: #ffeda3;
+text-decoration:none;
+}
+
+/* hide submenus in mobile devices */
+
+#navbar ul li{
+display:none;
+}
+
+#navbar li:hover a{
+text-decoration: none;
+background-color: #1a1a1a;
+border-radius: 5px 25px 25px 5px;
+border-bottom: thin white solid;
+width:75%;
+}
+
+} /*END MEDIA QUERY 2*/
