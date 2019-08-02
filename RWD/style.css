@@ -78,7 +78,7 @@ left:0; /*Bring back on-screen when needed*/
 
 #navbar li:hover a{ /*The top link display when a user hovers over sub-menu items*/
 text-decoration: none;
-background-color:#1a1a1a;;
+background-color:#1a1a1a;
 }
 
 #navbar li:hover ul a{ /*The hover state defined a global style for links even before they're hovered over. Here we undo these effects.*/
@@ -134,7 +134,7 @@ display: block;
 width: 66%;
 padding: 10px;
 margin-bottom: 5px;
-color: #fffce8;
+color: #1a1a1a;
 background: #ffeda3;
 text-decoration: none;
 border-radius: 1px 5px 5px 1px;
